@@ -1,0 +1,38 @@
+---
+layout: runbook
+title: '0002 · Merge reports only when the cause matches'
+owner: gniadzikm
+status: accepted
+reviewed: '2026-10-28'
+signature: 'Codex for Maciej Gniadzik (gniadzikm) · S01E03 · 2026-10-28'
+---
+
+<script>
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+**Date:** 28 October 2026 · **Author:** Codex with gniadzikm
+
+## Context
+
+The rendered views of #4471 contradict its single-cause summary. Subject equality concealed
+different parser and form-hint defects. Different subjects also described the same defect.
+
+## Decision
+
+This record supersedes [decision 0001](/kb/decisions/0001-dedupe-by-subject/) for new triage.
+Read the report body and establish tenant locale, form version and channel.
+Merge only when evidence supports the same cause. Use `causeOf` and `sameCause` as the current
+routing model, not as proof that every narrative is explained. Do not use intake tags or browser
+locale as substitutes for the tenant directory. Unknown or contradictory evidence needs review.
+
+## Consequences
+
+Triage requires reading rather than subject-only matching. Engineering receives separate
+parser and hint work, with unique report counts. The one-day narratives remain visible for
+investigation rather than being silently declared explained or labeled a proven timezone bug.
+This is the proposed desk rule in this submitted kb; no live support policy was changed here.
+
+See the [signed review](/kb/incidents/4471-review/) for rendered evidence.
+
+<RenderStamp {signature} />

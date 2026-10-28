@@ -1,9 +1,9 @@
 ---
 layout: runbook
-title: '#4471 · dates parse mm/dd in eu locales'
+title: '#4471 · merged date reports (summary superseded)'
 owner: support desk
-status: known
-reviewed: 2026-09-30
+status: superseded
+reviewed: '2026-10-28'
 ---
 
 <script>
@@ -15,11 +15,12 @@ reviewed: 2026-09-30
 Since April, people have told us their bookings land on the wrong day: a month flipped. By
 4 October the desk had **412 reports**.
 
-**Merged as one issue.** The parser reads dates month first, and our tenants write the day
-first. The fix is queued.
+**Merged as one issue, but not one cause.** The rendered table below separates parser and form-hint
+reports. See the [signed review](/kb/incidents/4471-review/) and its separate GitHub issues.
 
 <Callout>
-Known. One issue, one fix queued.
+The earlier “known, one issue, one fix queued” summary was not supported by these views.
+The export does not establish that either defect is fixed.
 </Callout>
 
 ## What was merged
@@ -32,5 +33,6 @@ Known. One issue, one fix queued.
 
 ## Lessons
 
-- A big ticket is mostly one bug reported many times. Merge early, count once.
-- Write the page while the queue is still in your head.
+- Count unique report IDs and group by cause, not subject or intake tag.
+- Separate report receipt dates from desk merge dates.
+- Keep anomalous narratives visible and recheck fresh exports before acting.

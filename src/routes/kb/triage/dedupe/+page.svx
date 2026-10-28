@@ -3,7 +3,7 @@ layout: runbook
 title: 'Triage: duplicate reports'
 owner: support desk
 status: accepted
-reviewed: 2024-06-11
+reviewed: '2026-10-28'
 ---
 
 <script>
@@ -16,16 +16,16 @@ and merge every duplicate into it, so engineering sees one thread with a count.
 
 ## The rule
 
-A report is a duplicate when its **subject line matches** the subject of an open ticket
-([decision 0001](/kb/decisions/0001-dedupe-by-subject)):
+A report is a duplicate when the **underlying cause matches** an open ticket.
+[Decision 0002](/kb/decisions/0002-dedupe-by-cause/) supersedes the old subject-only rule:
 
-1. lowercase the subject and strip punctuation;
-2. look for an open ticket with the same subject;
-3. found one: merge the report into it. None: open a new ticket.
+1. read the body and identify the tenant, its locale, form version and channel;
+2. compare the cause with existing tickets, using the rendered views and source logic;
+3. merge only with matching cause evidence; otherwise keep separate for investigation.
 
 <Callout>
-Matching on subject is fast and needs no reading. During an incident that matters more than
-anything else.
+Equal subjects can hide different causes. Different subjects can report the same cause.
+Browser locale and intake tags are not the tenant directory.
 </Callout>
 
 ## Try it
@@ -34,4 +34,5 @@ anything else.
 
 ## When you are unsure
 
-Merge. Splitting a ticket later is cheaper than two engineers chasing the same bug.
+Do not merge uncertain reports on subject alone. See the
+[signed review of #4471](/kb/incidents/4471-review/) for the limits of the current classifier.

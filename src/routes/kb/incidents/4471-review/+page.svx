@@ -1,0 +1,72 @@
+---
+layout: runbook
+title: '#4471 review · two causes hidden in one known ticket'
+owner: gniadzikm
+status: reviewed
+reviewed: '2026-10-28'
+signature: 'Codex for Maciej Gniadzik (gniadzikm) · S01E03 · 2026-10-28'
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import ReviewEvidence from '#lib/kb/ReviewEvidence.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+</script>
+
+<Callout kind="warn">
+The old “known, one issue, one fix” summary is not supported by its own rendered views.
+Work the parser and the form hint separately. Neither issue is fixed by filing these tickets.
+</Callout>
+
+This review uses the **4 October export**, not the live support queue. The desk keeps working;
+do not treat these counts as a current queue total. Run the components again with a fresh export
+before merging or closing new reports.
+
+## What the page actually shows
+
+<CauseTable ticket={4471} />
+
+The table runs `uniqueById`, then `groupByCause` with the tenant directory from `locales.ts`.
+`meta.browserLocale` and `meta.intakeTag` describe intake's guess, not the tenant's date order.
+Do not count raw JSON rows, count tag names, or classify from the subject line.
+
+- **Parser:** the shared parser reads month first for day-first tenants. For example,
+  Harbour Dental's app report `R-41200` describes 7 April becoming 4 July.
+- **Hint:** a day-first tenant using the **booking-v3 form** sees `MM/DD/YYYY`, while the form
+  reads the tenant's day-first order. Copper Studio's form report `R-41230` belongs here despite
+  its `parser` intake tag. App/email reports from the same tenant still route to parser.
+- `dayFirst()` asks `Intl.DateTimeFormat(...).formatToParts(...)` for date-part order.
+  Unknown tenants stay unplaced; never force them into the largest group.
+
+<ReviewEvidence />
+
+<QueueTimeline ticket={4471} />
+
+## A better merge rule
+
+**Match the underlying cause, not the words of the subject.** Read the body, tenant locale,
+form version and channel. Matching subjects can hide different causes; different subjects can
+describe the same cause. The running explorer below demonstrates both directions.
+
+<DedupeExplorer />
+
+When the evidence does not establish a cause, keep the report separate for investigation.
+The old triage page and decision 0001 were last reviewed in 2024. Their apparent authority
+does not overrule the live components; the layout marks pages older than its threshold as stale.
+The recent review date on the old incident summary did not make its “one fix” conclusion true.
+
+See [decision 0002](/kb/decisions/0002-dedupe-by-cause/) and the
+[updated triage instructions](/kb/triage/dedupe/). Decision 0001 is preserved as history,
+not silently rewritten.
+
+## Verification and limits
+
+The published HTML is built from this `.svx` and the actual Svelte components, including the
+computed desk reference below. The build is not evidence of a deployed product fix.
+The report-ID partitions and test commands are in this repository's `scripts/` directory.
+Recheck the desk before taking operational action; no live ticket has been moved by this review.
+
+<RenderStamp {signature} />
