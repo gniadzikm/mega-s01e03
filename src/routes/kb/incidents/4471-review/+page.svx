@@ -18,14 +18,30 @@ signature: 'Codex for Maciej Gniadzik (gniadzikm) · S01E03 · 2026-10-28'
 
 <Callout kind="warn">
 The old “known, one issue, one fix” summary is not supported by its own rendered views.
-Work the parser and the form hint separately. Neither issue is fixed by filing these tickets.
+The parser and the form hint have separate outcomes. Filing these tickets did not fix either one.
 </Callout>
+
+## Engineering update · 5 October 2026
+
+The [course desk update](https://hq.mega.dev/challenges/what-it-shows) now marks #4471 closed:
+
+- **Parser — fixed:** `fix(dates): parse dd/mm for eu locales`. GitHub issue #1 is closed as
+  **completed** on the strength of that update, not an independently verified deployment.
+- **Hint — won't fix:** **booking-v3 form retired**. GitHub issue #2 is closed as
+  **not planned**, not completed. Retirement is not a delivered hint fix.
+
+These are the desk's reported outcomes, received after the initial submission. The
+historical counts below still describe the export and are not rewritten by closure.
+The five anomalous narratives remain unresolved evidence; the update does not explain them.
 
 This review uses the **4 October export**, not the live support queue. The desk keeps working;
 do not treat these counts as a current queue total. Run the components again with a fresh export
 before merging or closing new reports.
 
 ## What the page actually shows
+
+The next table preserves the export's original ticket assignments. Its “no ticket of its own”
+label describes that export, not the separate GitHub issues linked later on this page.
 
 <CauseTable ticket={4471} />
 
@@ -67,6 +83,7 @@ not silently rewritten.
 The published HTML is built from this `.svx` and the actual Svelte components, including the
 computed desk reference below. The build is not evidence of a deployed product fix.
 The report-ID partitions and test commands are in this repository's `scripts/` directory.
-Recheck the desk before taking operational action; no live ticket has been moved by this review.
+Recheck the desk before taking operational action. Only the two course-work GitHub issues
+were closed; no live product ticket was moved and no independent deployment check was performed.
 
 <RenderStamp {signature} />

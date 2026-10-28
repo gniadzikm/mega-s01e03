@@ -90,3 +90,11 @@ The course work used `gh repo create ... --public --source=. --remote=origin`, t
 `gh issue create --repo gniadzikm/mega-s01e03 --title ... --body-file tickets/....md`.
 Verify with `gh issue list --repo gniadzikm/mega-s01e03 --state all` and `gh issue view`.
 Keep the desk's later updates separate from this immutable export evidence; re-read before acting.
+
+### Desk outcome received after the first submission
+
+The course accepted the two tickets, then exposed an engineering update: #4471 closed on
+5 October 2026. Parser: fixed (`fix(dates): parse dd/mm for eu locales`); hint: won't fix because
+the booking-v3 form was retired. Issue #1 was closed with `completed`; issue #2 with `not planned`.
+Both GitHub `state_reason` values were read back. The signed page and its rendered outputs now
+record these distinct outcomes without claiming an independently verified product deployment.

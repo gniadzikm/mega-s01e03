@@ -20,7 +20,9 @@ reports. See the [signed review](/kb/incidents/4471-review/) and its separate Gi
 
 <Callout>
 The earlier “known, one issue, one fix queued” summary was not supported by these views.
-The export does not establish that either defect is fixed.
+The export does not establish that either defect is fixed. The later
+[desk update and separate outcomes](/kb/incidents/4471-review/) report parser fixed and hint
+not planned because booking-v3 was retired.
 </Callout>
 
 ## What was merged
