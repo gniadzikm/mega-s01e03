@@ -18,7 +18,8 @@ and merge every duplicate into it, so engineering sees one thread with a count.
 ## The rule
 
 A report is a duplicate when the **underlying cause matches** an open ticket.
-<a href="{base}/kb/decisions/0002-dedupe-by-cause/">Decision 0002</a> supersedes the old subject-only rule:
+The <a href="{base}/kb/incidents/4471-review/">signed review of #4471</a>
+documents why the old subject-only rule is not sufficient:
 
 1. read the body and identify the tenant, its locale, form version and channel;
 2. compare the cause with existing tickets, using the rendered views and source logic;

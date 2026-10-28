@@ -45,11 +45,18 @@ Exported 2026-10-04 from the `support` repo, `apps/kb/` → `src/`.
 - [Parser: 379 unique reports](https://github.com/gniadzikm/mega-s01e03/issues/1)
 - [Form hint: 33 unique reports](https://github.com/gniadzikm/mega-s01e03/issues/2)
 - [Reproducible report-ID partition](evidence/report-partition.json)
-- [New decision 0002](src/routes/kb/decisions/0002-dedupe-by-cause/+page.svx)
 
 The first commit preserves the original export unchanged. The accepted historical decision 0001
 is still unchanged. New source text supersedes the old single-cause summary and subject-only triage.
 The supplied cause logic, tenant directory, desk notes and reports are unchanged.
+
+### Single-page submission experiment
+
+The sole signed KB source is `src/routes/kb/incidents/4471-review/+page.svx`.
+The duplicate root source and supplemental decision 0002 are omitted from this submission
+to test page-selection ambiguity. Both remain in Git history and on the local
+`experiment/ambiguity-baseline-2dc609e` branch. This is a hypothesis, not a course requirement.
+The original accepted decision 0001 is untouched. Report counts and ticket outcomes are unchanged.
 
 ### Run and verify
 

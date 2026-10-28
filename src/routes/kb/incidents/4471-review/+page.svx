@@ -77,8 +77,8 @@ The old triage page and decision 0001 were last reviewed in 2024. Their apparent
 does not overrule the live components; the layout marks pages older than its threshold as stale.
 The recent review date on the old incident summary did not make its “one fix” conclusion true.
 
-See <a href="{base}/kb/decisions/0002-dedupe-by-cause/">decision 0002</a> and the
-<a href="{base}/kb/triage/dedupe/">updated triage instructions</a>. Decision 0001 is preserved as history,
+See the <a href="{base}/kb/triage/dedupe/">updated triage instructions</a>.
+Decision 0001 is preserved as history,
 not silently rewritten.
 
 ## Verification and limits
