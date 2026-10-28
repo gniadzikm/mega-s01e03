@@ -25,9 +25,11 @@ The parser and the form hint have separate outcomes. Filing these tickets did no
 
 The [course desk update](https://hq.mega.dev/challenges/what-it-shows) now marks #4471 closed:
 
-- **Parser — fixed:** `fix(dates): parse dd/mm for eu locales`. GitHub issue #1 is closed as
+- **Parser — fixed:** `fix(dates): parse dd/mm for eu locales`.
+  [GitHub issue #1](https://github.com/gniadzikm/mega-s01e03/issues/1) is closed as
   **completed** on the strength of that update, not an independently verified deployment.
-- **Hint — won't fix:** **booking-v3 form retired**. GitHub issue #2 is closed as
+- **Hint — won't fix:** **booking-v3 form retired**.
+  [GitHub issue #2](https://github.com/gniadzikm/mega-s01e03/issues/2) is closed as
   **not planned**, not completed. Retirement is not a delivered hint fix.
 
 These are the desk's reported outcomes, received after the initial submission. The
