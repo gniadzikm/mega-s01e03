@@ -14,6 +14,7 @@ export default {
   ],
   kit: {
     adapter: adapter(),
+    paths: { base: process.env.BASE_PATH ?? '' },
     alias: { '#lib': './src/lib' }
   }
 };

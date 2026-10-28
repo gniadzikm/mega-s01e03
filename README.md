@@ -37,6 +37,7 @@ Exported 2026-10-04 from the `support` repo, `apps/kb/` → `src/`.
 
 ## S01E03 review (28 October 2026)
 
+- [Rendered page for the desk](https://gniadzikm.github.io/mega-s01e03/kb/incidents/4471-review/)
 - [Signed source page](src/routes/kb/incidents/4471-review/+page.svx)
 - [Browser screenshot of the complete page](rendered/4471-review.png)
 - [Prerendered HTML](rendered/4471-review.html)
@@ -81,7 +82,16 @@ These are export observations, not today's live desk state or evidence of a depl
 
 The local build and three evidence tests passed. Dependencies are pinned and locked. The final
 install audit reported six low-severity advisories, no moderate/high/critical advisories; this is
-not a claim that dependencies are risk-free. The only server used here is loopback static HTTP.
+not a claim that dependencies are risk-free. Local QA used loopback static HTTP.
+The public desk view uses GitHub Pages from the committed `docs/` build.
+
+To regenerate the GitHub Pages build:
+
+```sh
+BASE_PATH=/mega-s01e03 npm run build
+cp -R build/. docs/
+touch docs/.nojekyll
+```
 
 ### GitHub routine used
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import { daysSince, isoDay, STALE_AFTER_DAYS, type Day } from '#lib/kb/staleness';
 
   type Meta = { title: string; owner: string; status: string; reviewed: Day };
@@ -14,7 +15,7 @@
   <tbody>
     {#each rows as r (r.href)}
       <tr>
-        <td><a href={r.href}>{r.title}</a></td>
+        <td><a href={`${base}${r.href}/`}>{r.title}</a></td>
         <td>{r.owner}</td>
         <td>{r.status}</td>
         <td class:stale={daysSince(r.reviewed) > STALE_AFTER_DAYS}>{isoDay(r.reviewed)}</td>

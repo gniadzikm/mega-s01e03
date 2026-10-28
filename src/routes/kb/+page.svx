@@ -7,13 +7,14 @@ reviewed: 2026-09-28
 ---
 
 <script>
+  import { base } from '$app/paths';
   import KbIndex from '#lib/kb/KbIndex.svelte';
 </script>
 
 What the support desk knows, kept next to the code that knows it. One desk, every product:
 `sched-prod` (calendar invites for about 300k people) and the rest. When something breaks, the reports land here first.
 
-Start with [triage](/kb/triage/dedupe) if you are new on the desk.
+Start with <a href="{base}/kb/triage/dedupe/">triage</a> if you are new on the desk.
 
 ## Pages
 

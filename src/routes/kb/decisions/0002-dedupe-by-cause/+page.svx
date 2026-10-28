@@ -8,6 +8,7 @@ signature: 'Codex for Maciej Gniadzik (gniadzikm) · S01E03 · 2026-10-28'
 ---
 
 <script>
+  import { base } from '$app/paths';
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
 </script>
 
@@ -20,7 +21,7 @@ different parser and form-hint defects. Different subjects also described the sa
 
 ## Decision
 
-This record supersedes [decision 0001](/kb/decisions/0001-dedupe-by-subject/) for new triage.
+This record supersedes <a href="{base}/kb/decisions/0001-dedupe-by-subject/">decision 0001</a> for new triage.
 Read the report body and establish tenant locale, form version and channel.
 Merge only when evidence supports the same cause. Use `causeOf` and `sameCause` as the current
 routing model, not as proof that every narrative is explained. Do not use intake tags or browser
@@ -33,6 +34,6 @@ parser and hint work, with unique report counts. The one-day narratives remain v
 investigation rather than being silently declared explained or labeled a proven timezone bug.
 This is the proposed desk rule in this submitted kb; no live support policy was changed here.
 
-See the [signed review](/kb/incidents/4471-review/) for rendered evidence.
+See the <a href="{base}/kb/incidents/4471-review/">signed review</a> for rendered evidence.
 
 <RenderStamp {signature} />

@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
+  import { base } from '$app/paths';
   import { daysSince, isoDay, STALE_AFTER_DAYS, type Day } from '#lib/kb/staleness';
 
   // Every kb page: frontmatter in, the same frame out.
@@ -19,7 +20,7 @@
 
 <div class="kb">
   <header>
-    <a class="crumb" href="/kb">support desk · kb</a>
+    <a class="crumb" href={`${base}/kb/`}>support desk · kb</a>
     <h1>{title}</h1>
     <p class="meta">
       <span>owner <b>{owner}</b></span>

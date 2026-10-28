@@ -7,6 +7,7 @@ reviewed: '2026-10-28'
 ---
 
 <script>
+  import { base } from '$app/paths';
   import CauseTable from '#lib/kb/CauseTable.svelte';
   import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
   import Callout from '#lib/kb/Callout.svelte';
@@ -16,12 +17,12 @@ Since April, people have told us their bookings land on the wrong day: a month f
 4 October the desk had **412 reports**.
 
 **Merged as one issue, but not one cause.** The rendered table below separates parser and form-hint
-reports. See the [signed review](/kb/incidents/4471-review/) and its separate GitHub issues.
+reports. See the <a href="{base}/kb/incidents/4471-review/">signed review</a> and its separate GitHub issues.
 
 <Callout>
 The earlier “known, one issue, one fix queued” summary was not supported by these views.
 The export does not establish that either defect is fixed. The later
-[desk update and separate outcomes](/kb/incidents/4471-review/) report parser fixed and hint
+<a href="{base}/kb/incidents/4471-review/">desk update and separate outcomes</a> report parser fixed and hint
 not planned because booking-v3 was retired.
 </Callout>
 

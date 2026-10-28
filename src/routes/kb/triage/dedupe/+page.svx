@@ -7,6 +7,7 @@ reviewed: '2026-10-28'
 ---
 
 <script>
+  import { base } from '$app/paths';
   import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
   import Callout from '#lib/kb/Callout.svelte';
 </script>
@@ -17,7 +18,7 @@ and merge every duplicate into it, so engineering sees one thread with a count.
 ## The rule
 
 A report is a duplicate when the **underlying cause matches** an open ticket.
-[Decision 0002](/kb/decisions/0002-dedupe-by-cause/) supersedes the old subject-only rule:
+<a href="{base}/kb/decisions/0002-dedupe-by-cause/">Decision 0002</a> supersedes the old subject-only rule:
 
 1. read the body and identify the tenant, its locale, form version and channel;
 2. compare the cause with existing tickets, using the rendered views and source logic;
@@ -35,4 +36,4 @@ Browser locale and intake tags are not the tenant directory.
 ## When you are unsure
 
 Do not merge uncertain reports on subject alone. See the
-[signed review of #4471](/kb/incidents/4471-review/) for the limits of the current classifier.
+<a href="{base}/kb/incidents/4471-review/">signed review of #4471</a> for the limits of the current classifier.
