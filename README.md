@@ -57,8 +57,6 @@ The duplicate root source and supplemental decision 0002 are omitted from this s
 to test page-selection ambiguity. Both remain in Git history and on the local
 `experiment/ambiguity-baseline-2dc609e` branch. This is a hypothesis, not a course requirement.
 The original accepted decision 0001 is untouched. Report counts and ticket outcomes are unchanged.
-The next experiment changes only the review signature to `#4471`, the original ticket number,
-and regenerates the matching rendered outputs. This is not a stated signing requirement.
 
 ### Run and verify
 
@@ -81,7 +79,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory rendered/site
 
 Serve the site at the HTTP root so its absolute asset links resolve. Opening the standalone HTML
 through GitHub's source viewer will show code, not execute the components. The screenshot records
-Chrome's actual rendered page, including the component-generated desk reference DR-ZH5C-G2GY.
+Chrome's actual rendered page, including the component-generated desk reference DR-YNK4-8AV7.
 No hand-written substitute for the Svelte output was used.
 
 The 4 October export has 427 rows, 412 unique IDs, two classifier groups (379 and 33), and five
