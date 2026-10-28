@@ -58,6 +58,13 @@ to test page-selection ambiguity. Both remain in Git history and on the local
 `experiment/ambiguity-baseline-2dc609e` branch. This is a hypothesis, not a course requirement.
 The original accepted decision 0001 is untouched. Report counts and ticket outcomes are unchanged.
 
+### Course-issued signature
+
+The incident review uses the exact `ticket` issued by the course's `start-challenge` tool
+as its frontmatter signature. An author handle or incident number is not a substitute.
+The supplied `RenderStamp` computes the desk reference from that proof during rendering.
+The separate proof record remains outside this repository.
+
 ### Run and verify
 
 Use Node 24 or newer (the analysis scripts use Node's TypeScript stripping):
@@ -79,7 +86,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory rendered/site
 
 Serve the site at the HTTP root so its absolute asset links resolve. Opening the standalone HTML
 through GitHub's source viewer will show code, not execute the components. The screenshot records
-Chrome's actual rendered page, including the component-generated desk reference DR-YNK4-8AV7.
+Chrome's actual rendered page, including the component-generated desk reference DR-05MG-YAVZ.
 No hand-written substitute for the Svelte output was used.
 
 The 4 October export has 427 rows, 412 unique IDs, two classifier groups (379 and 33), and five

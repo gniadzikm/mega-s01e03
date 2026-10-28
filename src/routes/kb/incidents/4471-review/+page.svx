@@ -4,7 +4,7 @@ title: '#4471 review · two causes hidden in one known ticket'
 owner: gniadzikm
 status: reviewed
 reviewed: '2026-10-28'
-signature: "gniadzikm"
+signature: "v1.eyJzdWIiOiIzMjk4IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMxODE0ODUsImV4cCI6MTc5MzI2Nzg4NX0.m_dde0_Am3cuTojd1NoeuEgAHyWXgjRq9oUzbflPaZM"
 ---
 
 <script>
