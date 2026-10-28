@@ -72,7 +72,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory rendered/site
 
 Serve the site at the HTTP root so its absolute asset links resolve. Opening the standalone HTML
 through GitHub's source viewer will show code, not execute the components. The screenshot records
-Chrome's actual rendered page, including the component-generated desk reference DR-P8J3-Q8CX.
+Chrome's actual rendered page, including the component-generated desk reference DR-YNK4-8AV7.
 No hand-written substitute for the Svelte output was used.
 
 The 4 October export has 427 rows, 412 unique IDs, two classifier groups (379 and 33), and five

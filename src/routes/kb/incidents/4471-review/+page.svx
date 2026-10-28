@@ -4,7 +4,7 @@ title: '#4471 review · two causes hidden in one known ticket'
 owner: gniadzikm
 status: reviewed
 reviewed: '2026-10-28'
-signature: 'Codex for Maciej Gniadzik (gniadzikm) · S01E03 · 2026-10-28'
+signature: "gniadzikm"
 ---
 
 <script>
